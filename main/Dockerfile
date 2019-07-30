@@ -1,5 +1,5 @@
 FROM alpine:3.3
 
-COPY ./graph /opt/bin/
+COPY ./main /opt/bin/
 
 CMD [ "/opt/bin/" ]
