@@ -1,5 +1,11 @@
-FROM alpine:3.3
+FROM golang:latest 
 
-COPY ./main /opt/bin/
+RUN mkdir /app 
 
-CMD [ "/opt/bin/" ]
+ADD main/main.go /app/ 
+
+WORKDIR /app
+
+RUN go build -o main . 
+
+CMD ["/app/main"]
