@@ -17,7 +17,7 @@ func main() {
 		rw.Write([]byte("OK"))
 	})
 
-	fmt.Printf("Server starting at %s ...", route)
+	fmt.Printf("Server starting at %s:%d ...\n", route, port)
 
 	fmt.Println(http.ListenAndServe(fmt.Sprintf(":%d", port), nil))
 }
